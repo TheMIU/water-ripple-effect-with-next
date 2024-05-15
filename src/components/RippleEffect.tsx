@@ -4,11 +4,10 @@ import React, { useEffect } from 'react';
 import $ from 'jquery';
 import 'jquery.ripples';
 
-interface RippleEffectProps {
-    imageUrl: string;
-}
+import Image from "next/image";
+import bgImage from "../../public/bottle_bg.png"
 
-const RippleEffect: React.FC<RippleEffectProps> = ({ imageUrl }) => {
+export default function RippleEffect() {
     useEffect(() => {
         try {
             //@ts-ignore
@@ -22,16 +21,10 @@ const RippleEffect: React.FC<RippleEffectProps> = ({ imageUrl }) => {
     }, []);
 
     return (
-        <div
-            className="full-landing-image"
-            style={{
-                width: '100%',
-                height: '100vh',
-                background: `url(${imageUrl}) no-repeat center`,
-                backgroundSize: 'cover',
-            }}
-        ></div>
+        <>
+            <div className="full-landing-image" >
+                <Image src={bgImage} alt="image" priority />
+            </div>
+        </>
     );
-};
-
-export default RippleEffect;
+}
