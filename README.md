@@ -10,3 +10,7 @@
 ---
 ### run
 `npm run dev`
+
+---
+Web version : https://codepen.io/mukeshprajapati/pen/WBKOpW
+(Copyrights goes to respectful owners. I only converted it to Next project)
